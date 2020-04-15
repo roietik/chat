@@ -59,13 +59,13 @@ class Chat extends Component {
   handleLogout = () => auth.signOut();
 
   render() {
-    const { messages, add, name } = this.state;
+    const { messages, add } = this.state;
     const { handleChange, handleSubmit, handleLogout } = this;
     return (
       <>
         <List>
           {messages &&
-            messages.map(({ key, text, avatar }) => {
+            messages.map(({ key, text, avatar, name }) => {
               return (
                 <ListItem key={key}>
                   <ListItemAvatar>
